@@ -25,6 +25,7 @@ toc = "true"
 * outputtotal does not only corrspond to urine output, but also output from drains, blood loss, etc.
 * cellvaluenumeric is always POSITIVE, while dialysistotal is NEGATIVE for fluid removal and POSITIVE when fluid is administered to the patient via the dialysis machine.
 * With each new entry in intakeoutput, the current daily net total is reported. If several entries happen at the same time, the daily net total will be repeated multiple times. So if you are trying to compute the daily fluid balance, you need to first isolate unique instances of daily net total (`select distinct patientunitstayid, intakeoutputoffset, nettotal`) and then sum these unique values. Failure to do so will result in a grossly overestimated daily fluid balance.
+* Drugs infusion information can sometimes be found in this table, for instance antibiotics.
 
 # Table columns
 
